@@ -36,11 +36,8 @@ public class PlayerController : MonoBehaviour
     void Jump()
     {
         grounded = false;
-
         rb.velocity = Vector2.up * jumpForce;
-
         anim.SetTrigger(jumpTrigger);
-
         GameManager.instance.IncrementScore();
     }
 
