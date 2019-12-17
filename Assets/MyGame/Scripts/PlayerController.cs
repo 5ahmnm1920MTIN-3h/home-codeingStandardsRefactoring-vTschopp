@@ -2,7 +2,7 @@
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] float jumpForce;
+    [SerializeField] float jumpForce = 5;
 
     bool grounded;
     bool gameOver = false;
