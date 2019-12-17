@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-
     public static GameManager instance;
     public GameObject gameOverPanel;
     public Text scoreText;
