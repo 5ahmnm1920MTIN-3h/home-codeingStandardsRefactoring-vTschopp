@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public Text scoreText;
 
     [HideInInspector] public string mainScene = "MainScene";
-    [HideInInspector] public string menuScene = "MenuScene";
+    string menuScene = "MenuScene";
 
     int score;
 
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
 
     public void Menu()
     {
-        SceneManager.LoadScene(mainScene);
+        SceneManager.LoadScene(menuScene);
     }
 
     public void IncrementScore()
