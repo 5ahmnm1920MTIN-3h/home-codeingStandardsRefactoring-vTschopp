@@ -73,7 +73,7 @@ wird dieser "aufgeräumt" und gewissen Standards unterworfen.
 ### 10. Falsche Klammern
 - Falsche Klammern können für Errors sorgen.
 
-- Vielen Dank an @aweng für die Vorlage! **DRY 4 THE WIN!!!11einseinself**
+Vielen Dank an @aweng für die Vorlage! **DRY 4 THE WIN!!!11einseinself**
 
 # Santa Run
 Das originale REAMDE.md des Spiels findet man unter [README_GAME.md](README_GAME.md).
