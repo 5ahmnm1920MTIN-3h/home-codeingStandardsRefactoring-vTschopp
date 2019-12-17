@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     bool gameOver;
 
     Rigidbody2D rb;
-    Animator anim, anim2, anim3, anim4, anim5;
+    Animator anim;
 
     private void Awake()
     {
