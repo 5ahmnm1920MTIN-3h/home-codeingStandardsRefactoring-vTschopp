@@ -76,8 +76,8 @@ wird dieser "aufgeräumt" und gewissen Standards unterworfen.
 Vielen Dank an @aweng für die Vorlage! **DRY 4 THE WIN!!!11einseinself**
 
 # Santa Run
-Das originale REAMDE.md des Spiels findet man unter [README_GAME.md](README_GAME.md).
-Im Folgenden werden nur die Veränderungen beschrieben. **Refectoring wurde gemacht.**
+Das originale REAMDE.md inkl. Copyright des Spiels findet man unter [README_GAME.md](README_GAME.md).
+Im Folgenden werden nur die Veränderungen beschrieben. **Refectoring inkl. Test cases wurde gemacht, siehe Commits.**
 
 ## Development Platform
 - Unity 2019.1.14f1 on macOS Catalina
