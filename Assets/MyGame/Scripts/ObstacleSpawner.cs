@@ -8,6 +8,9 @@ public class ObstacleSpawner : MonoBehaviour
     public bool gameOver;
     public float minSpawnTime, maxSpawnTime;
 
+    float waitTime = 1f;
+    string coroutineSpawn = "Spawn";
+
     private void Awake()
     {
         if (instance == null)
@@ -19,12 +22,11 @@ public class ObstacleSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine("Spawn");
+        StartCoroutine(coroutineSpawn);
     }
 
     IEnumerator Spawn()
     {
-        float waitTime = 1f;
         yield return new WaitForSeconds (waitTime);
 
         while (!gameOver)
@@ -38,7 +40,7 @@ public class ObstacleSpawner : MonoBehaviour
 
     void SpawnObstacle()
     {
-        int random = Random.Range(0, obstacles.Length);
+        int random = Random.Range(0, obstacles.Length); // 0 is okay to use here.
         Instantiate(obstacles[random],transform.position,Quaternion.identity);
     }
 }
