@@ -2,13 +2,13 @@
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] float jumpForce;
+
     bool grounded;
     bool gameOver = false;
 
     Rigidbody2D rb;
     Animator anim, anim2, anim3, anim4, anim5;
-
-    [SerializeField] float jumpForce;
 
     private void Awake()
     {
@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0) && !gameOver && !gameOver && !gameOver)
+        if (Input.GetMouseButton(0) && !gameOver)
         {
             if (grounded == true)
             {
