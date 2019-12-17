@@ -10,6 +10,11 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     Animator anim;
 
+    string jumpTrigger = "Jump";
+    string deathAnimation = "SantaDeath";
+    string collisionTagGround = "Ground";
+    string collisionTagObstacles = "Obstacle";
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -34,7 +39,7 @@ public class PlayerController : MonoBehaviour
 
         rb.velocity = Vector2.up * jumpForce;
 
-        anim.SetTrigger("Jump");
+        anim.SetTrigger(jumpTrigger);
 
         GameManager.instance.IncrementScore();
     }
@@ -46,7 +51,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Ground")
+        if(collision.gameObject.tag == collisionTagGround)
         {
             grounded = true;
         }
@@ -54,11 +59,11 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Obstacle")
+        if(collision.gameObject.tag == collisionTagObstacles)
         {
             GameManager.instance.GameOver();
             Destroy(collision.gameObject);
-            anim.Play("SantaDeath");
+            anim.Play(deathAnimation);
             gameOver = SetGameOverTrue();
         }
     }
