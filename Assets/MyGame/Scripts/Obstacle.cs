@@ -4,6 +4,8 @@ public class Obstacle : MonoBehaviour
 {
 
     [SerializeField] private float MoveSpeed = 5;
+    float obstaclePosition = 15f;
+
     Rigidbody2D rb;
 
     private void Awake()
@@ -15,13 +17,13 @@ public class Obstacle : MonoBehaviour
     void Update()
     {
         //if obstacle's position x is < -15f it will be destroyed
-        if(transform.position.x < -15f)
+        if(transform.position.x < obstaclePosition * (-1))
         {
             Destroy(gameObject);
         }
 
         //if obstacle's position x is < -15f it will be destroyed
-        if (transform.position.x > 15f)
+        if (transform.position.x > obstaclePosition)
         {
             Destroy(gameObject);
         }
