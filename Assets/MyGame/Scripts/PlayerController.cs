@@ -23,12 +23,12 @@ public class PlayerController : MonoBehaviour
         {
             if (grounded == true)
             {
-                jump();
+                Jump();
             }
         }
     }
 
-    void jump()
+    void Jump()
     {
         grounded = false;
 
