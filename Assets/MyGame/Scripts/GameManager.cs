@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverPanel;
     public Text scoreText;
 
+    [HideInInspector] public string mainScene = "MainScene";
+    [HideInInspector] public string menuScene = "MenuScene";
+
     int score;
 
     private void Awake()
@@ -38,12 +41,12 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene(mainScene);
     }
 
     public void Menu()
     {
-        SceneManager.LoadScene("MenuScene");
+        SceneManager.LoadScene(mainScene);
     }
 
     public void IncrementScore()
