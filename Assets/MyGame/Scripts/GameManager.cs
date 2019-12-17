@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverPanel;
     public Text scoreText;
 
-    string defaultText;
     int score;
 
     private void Awake()
